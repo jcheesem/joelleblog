@@ -49,6 +49,48 @@
 }
 
 :root {
+  /* Light mode (default) */
+  --background: oklch(0.98 0.005 250);
+  --foreground: oklch(0.28 0.03 262);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.28 0.03 262);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.28 0.03 262);
+  --primary: oklch(0.62 0.16 245);
+  --primary-foreground: oklch(0.99 0.005 250);
+  --secondary: oklch(0.96 0.015 245);
+  --secondary-foreground: oklch(0.32 0.03 262);
+  --muted: oklch(0.96 0.012 248);
+  --muted-foreground: oklch(0.52 0.03 258);
+  --accent: oklch(0.72 0.16 330);
+  --accent-foreground: oklch(0.99 0.005 320);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.6 0.1 250 / 18%);
+  --input: oklch(0.6 0.1 250 / 22%);
+  --ring: oklch(0.62 0.16 245);
+  --chart-1: oklch(0.62 0.16 245);
+  --chart-2: oklch(0.72 0.16 330);
+  --chart-3: oklch(0.5 0.1 255);
+  --chart-4: oklch(0.7 0.13 290);
+  --chart-5: oklch(0.6 0.12 230);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.98 0.005 250);
+  --sidebar-foreground: oklch(0.28 0.03 262);
+  --sidebar-primary: oklch(0.62 0.16 245);
+  --sidebar-primary-foreground: oklch(0.99 0.005 250);
+  --sidebar-accent: oklch(0.96 0.015 245);
+  --sidebar-accent-foreground: oklch(0.32 0.03 262);
+  --sidebar-border: oklch(0.6 0.1 250 / 18%);
+  --sidebar-ring: oklch(0.62 0.16 245);
+
+  /* theme-adaptive gradient + mesh tokens */
+  --gradient-heading: linear-gradient(120deg, oklch(0.6 0.17 245) 0%, oklch(0.66 0.2 330) 100%);
+  --mesh-line: oklch(0.62 0.16 245 / 0.14);
+  --mesh-size: 38px;
+}
+
+.dark {
+  /* Dark mode (deep navy — original design) */
   --background: oklch(0.19 0.045 264);
   --foreground: oklch(0.95 0.02 250);
   --card: oklch(0.27 0.05 262);
@@ -63,7 +105,7 @@
   --muted-foreground: oklch(0.72 0.05 250);
   --accent: oklch(0.45 0.1 245);
   --accent-foreground: oklch(0.97 0.01 250);
-  --destructive: oklch(0.577 0.245 27.325);
+  --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(0.4 0.06 250 / 25%);
   --input: oklch(0.4 0.06 250 / 30%);
   --ring: oklch(0.72 0.13 235);
@@ -72,7 +114,6 @@
   --chart-3: oklch(0.5 0.1 255);
   --chart-4: oklch(0.4 0.08 260);
   --chart-5: oklch(0.3 0.06 262);
-  --radius: 0.625rem;
   --sidebar: oklch(0.19 0.045 264);
   --sidebar-foreground: oklch(0.95 0.02 250);
   --sidebar-primary: oklch(0.72 0.13 235);
@@ -81,40 +122,10 @@
   --sidebar-accent-foreground: oklch(0.95 0.02 250);
   --sidebar-border: oklch(0.4 0.06 250 / 25%);
   --sidebar-ring: oklch(0.72 0.13 235);
-}
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --gradient-heading: linear-gradient(135deg, oklch(0.99 0.01 250) 0%, oklch(0.82 0.09 240) 88%);
+  --mesh-line: oklch(0.72 0.13 235 / 0.1);
+  --mesh-size: 44px;
 }
 
 @layer base {
@@ -132,10 +143,20 @@
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, oklch(0.99 0.01 250) 0%, oklch(0.82 0.09 240) 88%);
+    background: var(--gradient-heading);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  /* Futuristic mesh / cross-hatch grid that fades in and out via a radial mask */
+  .mesh-bg {
+    background-image:
+      linear-gradient(to right, var(--mesh-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--mesh-line) 1px, transparent 1px);
+    background-size: var(--mesh-size) var(--mesh-size);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 35%, black 10%, transparent 75%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 35%, black 10%, transparent 75%);
   }
 
   .animate-fade-slide-up {
@@ -160,6 +181,22 @@
       opacity: 1;
       transform: none;
       animation: none;
+    }
+  }
+
+  .animate-twinkle {
+    animation: twinkle 4s ease-in-out infinite;
+  }
+
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0.15;
+      transform: scale(0.9);
+    }
+    50% {
+      opacity: 0.55;
+      transform: scale(1.1);
     }
   }
 }

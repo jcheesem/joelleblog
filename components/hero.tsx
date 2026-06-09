@@ -1,6 +1,14 @@
+import { Sparkles } from '@/components/sparkles'
+
 export function Hero() {
   return (
-    <header className="relative flex min-h-[80vh] flex-col items-center justify-center border-b border-primary/10 px-5 py-16 text-center">
+    <header className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden border-b border-primary/10 px-5 py-16 text-center">
+      {/* futuristic mesh grid */}
+      <div aria-hidden="true" className="mesh-bg pointer-events-none absolute inset-0 z-0" />
+
+      {/* scattered sparkle glitter */}
+      <Sparkles />
+
       {/* gradient overlays */}
       <div
         aria-hidden="true"

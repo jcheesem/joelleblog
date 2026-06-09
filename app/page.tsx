@@ -2,10 +2,12 @@ import { Hero } from '@/components/hero'
 import { DayCard } from '@/components/day-card'
 import { SocialSection } from '@/components/social-section'
 import { SiteFooter } from '@/components/site-footer'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 export default function Page() {
   return (
     <>
+      <ThemeToggle />
       <Hero />
 
       <main className="relative mx-auto max-w-[870px] px-4 py-14 sm:px-7">
@@ -21,6 +23,8 @@ export default function Page() {
             title="Prompt Yourself"
             delay="0.1s"
             description="Every agent boots with an initial prompt. Yours starts now."
+            dayLabel="Day 1"
+            date="June 8, 2026"
             image={{
               src: '/images/day1-tencent.jpg',
               alt: 'Joelle standing in front of the Tencent headquarters sign in Shenzhen',
