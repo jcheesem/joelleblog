@@ -2,11 +2,22 @@ import { Hero } from '@/components/hero'
 import { DayCard } from '@/components/day-card'
 import { SocialSection } from '@/components/social-section'
 import { SiteFooter } from '@/components/site-footer'
+import { ThemeToggle } from '@/components/theme-toggle'
+import { Sparkles } from '@/components/sparkles'
 
 export default function Page() {
   return (
-    <>
-      <Hero />
+    <div className="relative">
+      {/* full-page futuristic backdrop */}
+      <div
+        aria-hidden="true"
+        className="mesh-bg-page pointer-events-none fixed inset-0 z-0"
+      />
+      <Sparkles />
+
+      <div className="relative z-[1]">
+        <ThemeToggle />
+        <Hero />
 
       <main className="relative mx-auto max-w-[870px] px-4 py-14 sm:px-7">
         {/* vertical timeline line */}
@@ -21,6 +32,8 @@ export default function Page() {
             title="Prompt Yourself"
             delay="0.1s"
             description="Every agent boots with an initial prompt. Yours starts now."
+            dayLabel="Day 1"
+            date="June 8, 2026"
             image={{
               src: '/images/day1-tencent.jpg',
               alt: 'Joelle standing in front of the Tencent headquarters sign in Shenzhen',
@@ -134,6 +147,7 @@ export default function Page() {
 
       <SocialSection />
       <SiteFooter />
-    </>
+      </div>
+    </div>
   )
 }
