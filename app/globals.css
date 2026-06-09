@@ -84,9 +84,16 @@
   --sidebar-ring: oklch(0.62 0.16 245);
 
   /* theme-adaptive gradient + mesh tokens */
-  --gradient-heading: linear-gradient(120deg, oklch(0.6 0.17 245) 0%, oklch(0.66 0.2 330) 100%);
-  --mesh-line: oklch(0.62 0.16 245 / 0.14);
+  --gradient-heading: linear-gradient(
+    115deg,
+    oklch(0.55 0.16 248) 0%,
+    oklch(0.62 0.15 252) 38%,
+    oklch(0.7 0.12 285) 70%,
+    oklch(0.76 0.11 330) 100%
+  );
+  --mesh-line: oklch(0.62 0.16 245 / 0.1);
   --mesh-size: 38px;
+  --sparkle: oklch(0.78 0.1 235);
 }
 
 .dark {
@@ -126,6 +133,7 @@
   --gradient-heading: linear-gradient(135deg, oklch(0.99 0.01 250) 0%, oklch(0.82 0.09 240) 88%);
   --mesh-line: oklch(0.72 0.13 235 / 0.1);
   --mesh-size: 44px;
+  --sparkle: oklch(0.82 0.09 230);
 }
 
 @layer base {
@@ -149,7 +157,7 @@
     color: transparent;
   }
 
-  /* Futuristic mesh / cross-hatch grid that fades in and out via a radial mask */
+  /* Futuristic mesh / cross-hatch grid that spans the whole page */
   .mesh-bg {
     background-image:
       linear-gradient(to right, var(--mesh-line) 1px, transparent 1px),
@@ -157,6 +165,16 @@
     background-size: var(--mesh-size) var(--mesh-size);
     -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 35%, black 10%, transparent 75%);
     mask-image: radial-gradient(ellipse 80% 60% at 50% 35%, black 10%, transparent 75%);
+  }
+
+  /* Full-page mesh: a softer cross-hatch behind all content with a gentle edge fade */
+  .mesh-bg-page {
+    background-image:
+      linear-gradient(to right, var(--mesh-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--mesh-line) 1px, transparent 1px);
+    background-size: var(--mesh-size) var(--mesh-size);
+    -webkit-mask-image: linear-gradient(to bottom, black, black 92%, transparent);
+    mask-image: linear-gradient(to bottom, black, black 92%, transparent);
   }
 
   .animate-fade-slide-up {
@@ -191,12 +209,12 @@
   @keyframes twinkle {
     0%,
     100% {
-      opacity: 0.15;
-      transform: scale(0.9);
+      opacity: 0.1;
+      transform: scale(0.85);
     }
     50% {
-      opacity: 0.55;
-      transform: scale(1.1);
+      opacity: 0.4;
+      transform: scale(1.05);
     }
   }
 }

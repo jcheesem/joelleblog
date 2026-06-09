@@ -40,9 +40,9 @@ export function DayCard({
         className="absolute -left-3.5 top-6 h-7 w-1.5 rounded-full bg-primary/60 transition-all group-hover:h-9 group-hover:bg-primary sm:-left-7 sm:top-8 sm:w-2"
       />
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2">
         {/* LEFT: mission title, subtitle, media */}
-        <div className="flex flex-col">
+        <div className="flex flex-col md:sticky md:top-6 md:self-start">
           <span className="mb-3.5 inline-block w-fit rounded-full border border-accent/40 bg-secondary px-4 py-1 text-xs font-medium uppercase tracking-wider text-primary">
             {mission}
           </span>
@@ -56,7 +56,7 @@ export function DayCard({
           </p>
 
           {image && (
-            <div className="mt-auto aspect-square overflow-hidden rounded-2xl">
+            <div className="aspect-square overflow-hidden rounded-2xl">
               <Image
                 src={image.src || '/placeholder.svg'}
                 alt={image.alt}

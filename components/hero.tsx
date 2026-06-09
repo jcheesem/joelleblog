@@ -1,22 +1,12 @@
-import { Sparkles } from '@/components/sparkles'
+import { SocialLinks } from '@/components/social-links'
 
 export function Hero() {
   return (
     <header className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden border-b border-primary/10 px-5 py-16 text-center">
-      {/* futuristic mesh grid */}
-      <div aria-hidden="true" className="mesh-bg pointer-events-none absolute inset-0 z-0" />
-
-      {/* scattered sparkle glitter */}
-      <Sparkles />
-
-      {/* gradient overlays */}
+      {/* soft radial glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_75%_65%,rgba(0,133,209,0.08),transparent_70%)]"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 left-0 z-[1] h-24 w-full bg-gradient-to-t from-background to-transparent"
       />
 
       <div className="relative z-[2] flex flex-col items-center">
@@ -49,6 +39,9 @@ export function Hero() {
             Shenzhen · Chengdu
           </span>
         </div>
+
+        {/* social links */}
+        <SocialLinks className="mt-7" />
 
         <div className="mt-9 text-xs uppercase tracking-[3px] text-muted-foreground/60">
           ↓ Scroll to explore missions
