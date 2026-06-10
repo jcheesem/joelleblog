@@ -116,7 +116,63 @@ export default function Page() {
             title="Debug Yourself"
             delay="0.22s"
             description="Every agent carries biases from its training data. Today, China just gave you new data."
-            comingSoon
+            dayLabel="Day 2"
+            date="June 9, 2026"
+            image={{
+              src: '/images/day2-aviation-museum.jpg',
+              alt: 'Joelle seated in the cockpit of a retired aircraft at the Sichuan Aviation Science and Technology Museum',
+            }}
+            body={
+              <>
+                <p>
+                  We started bright and early to catch a flight from Shenzhen to
+                  our next destination, Chengdu. Chengdu is the capital of
+                  Sichuan province and it is known for its fertile farmland in
+                  southwestern China. It is a major economic hub and also the
+                  location of Tencent&apos;s HQ which we will be visiting on the
+                  final day of the program. After arriving in Chengdu, we took a
+                  bus to Pengzhou, a city under the Chengdu prefecture. Here, we
+                  took a tour of the Sichuan Aviation Science and Technology
+                  Museum.
+                </p>
+                <p>
+                  This museum presents an impressive collection of model
+                  airplanes, genuine retired airplanes from across all of
+                  aviation history, and informative exhibits and simulations to
+                  demonstrate the significance and military power of aviation in
+                  China. There&apos;s a large emphasis on military technology,
+                  including a diorama collection of different aviation-involved
+                  political conflicts like the pearl harbor attacks, a 3D
+                  animated video displaying the structured stages and strategy
+                  behind air attacks, and a moving birds-eye-view map that shows
+                  how planes and other military vehicles were camouflaged as
+                  civilian residential areas. This map displayed 3D plaster
+                  models of ordinary homes, but it was revealed by a projected
+                  image that these buildings actually housed tanks, explosives,
+                  and other military vehicles to avoid detection from aerial
+                  view. This display forced me to reflect on how these
+                  strategies lead to the purposeful bombing and destruction of
+                  innocent civilians in warfare. When considering AI for the
+                  shared future, we must address the role that AI has in
+                  augmenting destructive and inhumane political conflict,
+                  especially in the context of the recent controversial contract
+                  between OpenAI and the U.S. Department of War.
+                </p>
+                <p>
+                  Today&apos;s program mission, &quot;Debug Yourself,&quot;
+                  focuses on reflecting on our biases. Individuals,
+                  organizations, and societies all possess biases. As a result,
+                  our AI algorithms will also possess bias. This reflection had a
+                  twofold purpose. The primary purpose was to reflect on our
+                  first impressions and initial perceptions of Chinese
+                  technology and innovation and to consider how our opinions have
+                  changed since spending a couple of days immersed in Chinese
+                  tech, and secondarily, to reflect on bias in AI algorithms and
+                  how it can be addressed with social responsibility in tech
+                  development.
+                </p>
+              </>
+            }
           />
 
           <DayCard
